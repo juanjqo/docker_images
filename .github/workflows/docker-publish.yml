@@ -19,10 +19,10 @@ jobs:
        
           - name: Build Docker image 
             run: |
-              docker build -t ubuntu_24_dqrobotics ubuntu_24/dqrobotics
+              docker build -t juanjqo/ubuntu_24_dqrobotics ubuntu_24/dqrobotics/
               docker images
           - name: Push Docker image  
             run: |
-              docker push juanjqo/docker_images:ubuntu_24_dqrobotics
+              docker push juanjqo/ubuntu_24_dqrobotics
        
 
