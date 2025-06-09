@@ -2,3 +2,10 @@
 
 # docker_images
 This repository contains Docker images for DQ Robotics, ROS2, and more.
+
+
+### Build an image
+
+```shell
+docker build -t ubuntu/dqrobotics/ 
+```
