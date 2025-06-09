@@ -23,6 +23,6 @@ jobs:
               docker images
           - name: Push Docker image  
             run: |
-              docker push juanjqo/ubuntu_24_dqrobotics
+              docker push juanjqo/docker_images:ubuntu_24_dqrobotics
        
 
