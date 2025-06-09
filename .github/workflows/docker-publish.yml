@@ -17,9 +17,11 @@ jobs:
                      username: ${{ github.actor }}   
                      password: ${{ secrets.GITHUB_TOKEN }}
        
-          - name: Build the hello-docker Docker image 
+          - name: Build Docker image 
             run: |
               docker build -t ubuntu_24_dqrobotics ubuntu_24/dqrobotics
-              docker push juanjqo/ubuntu_24_dqrobotics
+              docker images
+          - name: Push Docker image      
+              docker push juanjqo/ubuntu_24/dqrobotics
        
 
