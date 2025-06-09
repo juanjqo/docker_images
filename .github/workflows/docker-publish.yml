@@ -1,35 +1,25 @@
 name: publish
 
-on: [push]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
 
-publish-hello-docker-image:
-
-runs-on: ubuntu-latest
-
-steps:
-
-- uses: actions/checkout@v2
-
-- name: Login to GitHub Container Registry
-
-uses: docker/login-action@v1
-
-with:
-
-registry: ghcr.io
-
-username: ${{ github.actor }}
-
-password: ${{ secrets.GITHUB_TOKEN }}
-
-- name: Build the hello-docker Docker image
-
-run: |
-
-       docker build -t ubuntu_24_dqrobotics ubuntu_24/dqrobotics
-
-       ocker push juanjqo/docker_images/ubuntu_24_dqrobotics
+    steps:
+          - uses: actions/checkout@v2
+          - name: Login to GitHub Container Registry  
+          - uses: docker/login-action@v1
+            with:
+                     registry: juanjqo.io  
+                     username: ${{ github.actor }}   
+                     password: ${{ secrets.GITHUB_TOKEN }}
+       
+          - name: Build the hello-docker Docker image 
+            run: |
+              docker build -t ubuntu_24_dqrobotics ubuntu_24/dqrobotics:latest
+              docker push juanjqo/docker_images/ubuntu_24_dqrobotics:latest
        
 
