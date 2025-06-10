@@ -18,10 +18,10 @@ jobs:
        
           - name: Build Docker image 
             run: |
-              docker build -t juanjqo/ubuntu_24_dqrobotics ubuntu_24/dqrobotics/
+              docker build -t ${{ vars.DOCKER_USERNAME }}/ubuntu_24_dqrobotics ubuntu_24/dqrobotics/
               docker images
           - name: Push Docker image  
             run: |
-              docker push juanjqo/ubuntu_24_dqrobotics
+              docker push ${{ vars.DOCKER_USERNAME }}/ubuntu_24_dqrobotics
        
 
