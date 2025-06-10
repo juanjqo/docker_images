@@ -24,7 +24,7 @@ jobs:
        
           - name: Build Docker image 
             run: |
-              docker build --platform linux/amd64,linux/arm64 -t ${{ vars.DOCKER_USERNAME }}/ubuntu_24_dqrobotics ubuntu_24/dqrobotics/
+              docker buildx build --platform linux/amd64,linux/arm64 -t ${{ vars.DOCKER_USERNAME }}/ubuntu_24_dqrobotics ubuntu_24/dqrobotics/
               docker images
           - name: Push Docker image  
             run: |
