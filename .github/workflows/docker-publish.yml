@@ -31,6 +31,13 @@ jobs:
               file: ubuntu_24/dqrobotics/Dockerfile
               tags: ${{ vars.DOCKER_USERNAME }}/ubuntu_24_dqrobotics
 
-
+          - name: Build and push ubuntu_24_dqrobotics_ros_jazzy 
+            uses: docker/build-push-action@v6
+            with:
+              # platforms: linux/amd64,linux/arm64
+              platforms: linux/amd64
+              push: true
+              file: ubuntu_24/dqrobotics_ros_jazzy/Dockerfile
+              tags: ${{ vars.DOCKER_USERNAME }}/ubuntu_24_dqrobotics_ros_jazzy
            
 
