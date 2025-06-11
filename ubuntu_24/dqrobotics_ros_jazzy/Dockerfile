@@ -1,4 +1,4 @@
-FROM juanjqo/juanjqo/ubuntu_24_dqrobotics
+FROM juanjqo/ubuntu_24_dqrobotics
 ARG ROS_DOMAIN_ID=1
 ENV ROS_DOMAIN_ID=$ROS_DOMAIN_ID  
 SHELL ["/bin/bash", "-c"]
