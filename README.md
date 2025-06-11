@@ -3,8 +3,7 @@
 # docker_recipes
 This repository contains Docker images for DQ Robotics, ROS2, and more.
 
-
-### Build
+## Instructions for local builds
 
 ```shell
 docker build -t ubuntu_24_dqrobotics ubuntu_24/dqrobotics/ 
