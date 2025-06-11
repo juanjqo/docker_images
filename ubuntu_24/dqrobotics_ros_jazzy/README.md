@@ -1,5 +1,5 @@
 # Specs
 
-| OS | DQ Robotics |
-| --- | ----|
-| Ubuntu 24 | Development branch |
+| OS | DQ Robotics | ROS2 & SAS |
+| --- | ----| ---- |
+| Ubuntu 24 | Development branch | Jazzy | 
