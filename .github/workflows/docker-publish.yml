@@ -27,6 +27,7 @@ jobs:
             with:
               platforms: linux/amd64,linux/arm64
               push: true
-              tags: ${{ vars.DOCKER_USERNAME }}/ubuntu_24_dqrobotics:latest
+              file: ubuntu_24/dqrobotics/Dockerfile
+              tags: ${{ vars.DOCKER_USERNAME }}/ubuntu_24_dqrobotics
            
 
