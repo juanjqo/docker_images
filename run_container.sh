@@ -9,4 +9,4 @@ fi
 xhost +local:root
 docker run -it --name=$1 \
 --rm --privileged --network=host --env=DISPLAY \
-ubuntu_24_dqrobotics /bin/bash
+$1 /bin/bash
