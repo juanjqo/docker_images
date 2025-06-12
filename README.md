@@ -3,6 +3,12 @@
 # docker_recipes
 This repository contains Docker images for DQ Robotics, ROS2, and more.
 
+## Docker Hub Instructions
+
+```shell
+docker pull juanjqo/ubuntu_24_dqrobotics
+```
+
 ## Instructions for local tests
 
 Clone and build:
@@ -13,8 +19,9 @@ git clone https://github.com/Adorno-Lab/docker_recipes.git --recursive
 cd ~/docker_recipes
 docker build -t ubuntu_24_dqrobotics ubuntu_24/dqrobotics/
 ```
-Run:
+
+## Run
 
 ```shell
-docker run -it --name="ubuntu_24_dqrobotics" --rm --privileged --network=host ubuntu_24_dqrobotics /bin/bash
+sh run_container.sh ubuntu_24_dqrobotics
 ```
