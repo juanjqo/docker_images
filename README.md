@@ -16,5 +16,5 @@ docker build -t ubuntu_24_dqrobotics ubuntu_24/dqrobotics/
 Run:
 
 ```shell
-docker run -it --name="ubuntu_24_dqrobotics" --rm --privileged --network=host ubuntu_24_dqrobotics /bin/bash
+sh run_container.sh ubuntu_24_dqrobotics
 ```
